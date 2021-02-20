@@ -1,0 +1,126 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/stardust/Desktop/code/advance_rust/" . "src/")
+ ("/home/stardust/go/src/github.com/segfult/" . "trumpet/")
+ ("/home/stardust/Desktop/code/magic/" . "src/")
+ ("/home/stardust/proj/src/github.com/segfult/skywalker/" . "src/")
+ ("/home/stardust/proj/src/github.com/segfult/" . "skywalker/")
+ ("/home/stardust/Desktop/code/sender/" . "src/")
+ ("/home/" . "stardust/")
+ ("/home/stardust/proj/src/github.com/shftrg/" . "axis/")
+ ("/home/stardust/proj/src/github.com/" . "segfult/")
+ ("/home/stardust/proj/src/" . "github.com/")
+ ("/home/stardust/proj/" . "src/")
+ ("/home/stardust/go/src/github.com/shftrg/" . "less_see/")
+ ("/home/stardust/go/src/github.com/" . "segfult/")
+ ("/home/stardust/go/src/" . "github.com/")
+ ("/home/stardust/go/" . "src/")
+ ("/home/stardust/Desktop/code/genr/" . "src/")
+ ("/home/stardust/Desktop/code/" . "advance_rust/")
+ ("/home/stardust/Desktop/" . "code/")
+ ("/home/stardust/" . "Desktop/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/stardust/Desktop/code/advance_rust/src/"
+ "/home/stardust/.emacs.d/"
+ "/home/stardust/proj/src/github.com/segfult/skywalker/"
+ "/home/stardust/proj/src/github.com/segfult/skywalker/src/"
+ "/home/stardust/go/src/github.com/segfult/trumpet/"
+ "/home/stardust/go/src/github.com/segfult/pancake/"
+ "/home/stardust/"
+ "/home/stardust/go/src/github.com/segfult/tst_macs/"
+ "/home/stardust/Desktop/code/magic/src/"
+ "/home/stardust/Desktop/code/sender/src/"
+ "/home/stardust/Desktop/code/taa/"
+ "/home/stardust/go/src/github.com/shftrg/less_see/"
+ "/home/stardust/Desktop/code/genr/src/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "main.rs"
+ "init.el"
+ "Cargo.toml"
+ "lib.rs"
+ "main.go"
+ ".vimrc"
+ ".psql_history"
+ "a.out"
+ "formatter.cpp"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/stardust/.emacs.d/" (24623 56516 75743 809000) ".dap-breakpoints" ".lsp-session-v1" "./" "elpa/" "auto-save-list/" "init.el" "irony/" "../" "snippets/" "ido.last")
+
+ ("/home/stardust/Desktop/code/advance_rust/" (24623 55645 505760 871000) "Cargo.toml" "./" ".git/" "target/" "Cargo.lock" "src/" ".gitignore" "../")
+
+ ("/home/stardust/Desktop/code/advance_rust/src/" (24623 55689 5760 19000) "./" "main.rs" "../")
+
+ ("/home/stardust/Desktop/code/" (24623 55612 635761 516000) "my_macs/" "magic/" "chan/" "./" "som/" "faster/" "rust_async/" "fog/" "rust_book/" "sender/" "advance_rust/" "donut" "compiler_lab/" "rand_name/" "web/" "../" "bjarne2/" "macro_magic/" "bjarne/" "jiffy/")
+
+ ("/home/stardust/" (24623 45973 105980 595000) ".ghcup/" ".cabal/" "Templates/" ".sessionphrase" ".vimrc" ".psql_history" "rcube.txt" "Public/" ".cargo/" ".xsession-errors.old" "./" "Pictures/" "Documents/" ".vim/" ".mozilla/" ".emacs.d/" ".dmrc" ".gnupg/" ".sbclrc" ".config/" "Music/" "go/" ".npm/" ".local/" ".screenlayout/" ".gnome/" ".steampath" ".vscode/" "test" ".bash_logout" ".profile" ".python_history" ".gitconfig" "Postman/" "Videos/" ".steampid" ".xprofile" ".bash_profile" "Calibre Library/" "Downloads/" ".viminfo" "Desktop/" ".steam/" ".rustup/" ".gdbinit" "../" ".cache/" ".xsession-errors" ".audacity-data/" ".pulse-cookie" "software/" "proj/" ".bashrc" ".alacritty.yml" ".Xauthority" ".pki/" ".bash_history" ".tmux.conf")
+
+ ("/home/stardust/proj/src/github.com/segfult/skywalker/src/" (24620 43901 115511 413000) "./" "lib.rs" "../")
+
+ ("/home/stardust/proj/src/github.com/segfult/" (24620 3642 715480 254000) "mozart/" "harambe/" "./" "docs.rs/" "pancake/" "skywalker/" "../" "firestore-rs/" "kepler/")
+
+ ("/home/stardust/go/src/github.com/segfult/trumpet/" (24619 49265 126067 398000) "config.go" "go.mod" "./" "README.md" ".git/" "gotify" ".gitignore" "logo.png" "server.go" "common.go" "../" ".editorconfig" "main.go" "go.sum")
+
+ ("/home/stardust/go/src/github.com/segfult/" (24619 23380 256239 517000) "chat/" "waffle/" "./" "launch/" "examps/" "pancake/" "test/" "tst_macs/" "chitchat/" "test_wss/" "trumpet/" "../" "basc_bot/" "basic/" "main.go" "conc/" "social-clone/")
+
+ ("/home/stardust/go/src/github.com/" (24619 17950 786275 619000) "jroimartin/" "gorilla/" "user1and/" "google/" "./" "nsf/" "mattn/" "BurntSushi/" "segfult/" "sergi/" "jinzhu/" "zmb3/" "../" "rivo/")
+
+ ("/home/stardust/go/src/github.com/segfult/pancake/" (24617 27110 156266 188000) "go.mod" "./" "web/" "../" "main.go" "go.sum")
+
+ ("/home/stardust/go/src/github.com/segfult/tst_macs/" (24617 28353 156257 923000) "./" "../" "main.go")
+
+ ("/home/stardust/go/src/" (24617 26329 56271 382000) "honnef.co/" "./" "mvdan.cc/" "gorm.io/" "github.com/" "golang.org/" "../")
+
+ ("/home/stardust/go/" (24598 28017 96290 692000) "./" "src/" "../" "pkg/" "bin/")
+
+ ("/home/stardust/Desktop/code/magic/src/" (24617 24386 836284 297000) "./" "main.rs" "../")
+
+ ("/home/stardust/Desktop/code/magic/" (24617 15887 2322 736000) "Cargo.toml" "./" ".git/" "src/" ".gitignore" "../")
+
+ ("/home/stardust/Desktop/" (24603 50613 894349 450000) "code/" "./" "../" "steam.desktop")
+
+ ("/home/stardust/proj/src/github.com/segfult/skywalker/" (24616 6396 1571 672000) "Cargo.toml" "./" ".git/" "target/" "Cargo.lock" "src/" ".gitignore" "../")
+
+ ("/home/stardust/proj/src/github.com/" (24586 23968 283199 603000) "user1and/" "./" "oter/" "segfult/" "../")
+
+ ("/home/stardust/Desktop/code/sender/src/" (24582 24750 832292 5000) "./" "main.rs" "../")
+
+ ("/home/stardust/Desktop/code/sender/" (24582 24765 812292 15000) "Cargo.toml" "./" ".git/" "target/" "Cargo.lock" "src/" ".gitignore" "../")
+
+ ("/home/stardust/Desktop/code/web/" (24581 11712 194891 89000) "./" "exp2/" "exp1/" "../")
+
+ ("/home/stardust/Desktop/code/taa/" (24584 26807 453258 422000) "formatter.cpp" "./" "../" "a.out")
+
+ ("/home/" (24561 41829 922242 243000) "./" "stardust/" "../" "lost+found/")
+
+ ("/home/stardust/proj/src/github.com/shftrg/axis/" (24580 25064 306201 611000) "./" "../")
+
+ ("/home/stardust/proj/src/github.com/shftrg/" (24582 25593 502292 579000) "milkshake/" "./" "cmake_tut/" "axis/" "flkp/" "discord.cpp/" "florrum/" "hoth/" "serenity/" "../" "koivo/")
+
+ ("/home/stardust/proj/src/" (24561 58517 473432 58000) "./" "github.com/" "../")
+
+ ("/home/stardust/proj/" (24561 58517 473432 58000) "./" "src/" "../")
+
+ ("/home/stardust/go/src/github.com/shftrg/less_see/" (24582 31759 652296 784000) "./" "../" "main.go")
+
+ ("/home/stardust/go/src/github.com/shftrg/" (24584 10341 653252 391000) "tt/" "milkshake/" "less_see/" "./" "../")
+
+ ("/home/stardust/go/pkg/" (24584 10382 453251 340000) "mod/" "./" "../")
+
+ ("/home/stardust/Desktop/code/genr/src/" (24581 2487 44884 798000) "./" "main.rs" "../")
+
+ ("/home/stardust/Desktop/code/genr/" (24571 9895 142009 287000) "Cargo.toml" "./" ".git/" "target/" "Cargo.lock" "src/" ".gitignore" "../")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

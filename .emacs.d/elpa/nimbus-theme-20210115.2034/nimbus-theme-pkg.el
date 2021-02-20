@@ -1,0 +1,2 @@
+;;; Generated package description from /home/stardust/.emacs.d/elpa/nimbus-theme-20210115.2034/nimbus-theme.el  -*- no-byte-compile: t -*-
+(define-package "nimbus-theme" "20210115.2034" "An awesome dark theme" '((emacs "24.1")) :commit "ca504e4387641b648e7bc6037fe515b03a90b801" :authors '(("Marcin Swieczkowski" . "marcin.swieczkowski@gmail.com") ("See README.md for full list of contributors.")) :maintainer '("Marcin Swieczkowski" . "marcin.swieczkowski@gmail.com") :keywords '("faces") :url "https://github.com/m-cat/nimbus-theme")

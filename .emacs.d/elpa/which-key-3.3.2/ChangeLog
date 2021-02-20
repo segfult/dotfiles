@@ -1,0 +1,3278 @@
+2019-02-25  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.3.2
+
+2019-02-25  Justin Burkett  <justin@burkett.cc>
+
+	Always check non-major-mode replacements in which-key--maybe-replace
+
+2019-02-24  Justin Burkett  <justin@burkett.cc>
+
+	Simplify finding and matching replacements
+
+	Don't try to grab all matching replacements ahead of time, because later
+	ones may not match if earlier ones make deletions.
+
+	Fixes #202
+
+2018-11-14  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.3.1
+
+2018-11-14  Justin Burkett  <justin@burkett.cc>
+
+	Fix use of describe-prefix-bindings in which-key-show-standard-help
+
+	Use describe-prefix-bindings directly if we do not enter through 
+	which-key-C-h-dispatch.
+
+	Fixes #198
+
+2018-11-08  Justin Burkett  <justin@burkett.cc>
+
+	Check for existence of buffer in which-key--popup-showing-p
+
+	Fixes #197
+
+2018-08-28  Justin Burkett  <justin@burkett.cc>
+
+	Mention #130 in README
+
+2018-06-27  Justin Burkett  <justin@burkett.cc>
+
+	Make Travis test on v26.1
+
+2018-06-21  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.3.0
+
+2018-06-08  Justin Burkett  <justin@burkett.cc>
+
+	Fix handling of duplicate (evil) bindings in show keymap
+
+2018-06-01  Justin Burkett  <justin@burkett.cc>
+
+	Use window-size-change-functions for detecting size changes
+
+	Fixes #193
+
+2018-05-30  Justin Burkett  <justin@burkett.cc>
+
+	Add support for evil's auxiliary maps in show-keymap functions
+
+2018-05-30  Justin Burkett  <justin@burkett.cc>
+
+	Fix prefix bindings in which-key-show-major-mode
+
+2018-05-22  Justin Burkett  <justin@burkett.cc>
+
+	Fix behavior of f and t in evil operator map
+
+	f and t (also F and T) read characters manually, so the popup should not
+	be shown after these commands. This only applies if 
+	which-key-show-operator-state-maps is non-nil.
+
+	Fixes #191
+
+2018-04-26  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.2.0
+
+2018-03-21  Michał K  <k.michal@zoho.com>
+
+	Fix and improve defcustoms
+
+2018-03-01  Justin Burkett  <justin@burkett.cc>
+
+	Fix switching to top-level from which-key-undo-key
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Factor out which-key--this-command-keys function
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Fixes related to removal of which-key--current-prefix
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Fix display of meta bindings in which-key-show-keymap
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Fix which-key--create-pages
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Remove which-key--current-prefix
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Add prefix arg to which-key--get-current-bindings and ..
+
+	which-key--get-bindings
+
+2018-02-28  Justin Burkett  <justin@burkett.cc>
+
+	Remove a bunch of global variables
+
+	Remove need for which-key--using-top-level. Add prefix-title slot to 
+	which-key--pages object.  Remove which-key--using-show-keymap. Remove 
+	which-key--current-show-keymap-name. Remove 
+	which-key--using-show-operator-keymap.
+
+2018-02-27  Justin Burkett  <justin@burkett.cc>
+
+	Add and use which-key--automatic-display
+
+2018-02-27  Justin Burkett  <justin@burkett.cc>
+
+	Use cl-struct to hold which-key pages
+
+2018-02-26  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-toggle-docstrings
+
+2018-02-26  Justin Burkett  <justin@burkett.cc>
+
+	Consolidate key binding collection into which-key--get-bindings
+
+2018-02-26  Justin Burkett  <justin@burkett.cc>
+
+	Refactor show keymap functions
+
+2018-02-25  Justin Burkett  <justin@burkett.cc>
+
+	Use symbol at point in whow keymap functions
+
+2018-02-25  Justin Burkett  <justin@burkett.cc>
+
+	Fix which-key--show-keymap when no bidnings found
+
+	which-key--get-formatted-key-bindings takes a nil argument to mean look
+	for global bindings which is not what we want here.
+
+2018-02-25  Justin Burkett  <justin@burkett.cc>
+
+	Detect menu-items in which-key--get-keymap-bindings
+
+2018-02-24  Justin Burkett  <justin@burkett.cc>
+
+	Fix typo in previous commit
+
+2018-02-24  Justin Burkett  <justin@burkett.cc>
+
+	Fix docstring of which-key--get-keymap-bindings
+
+2018-02-24  Justin Burkett  <justin@burkett.cc>
+
+	Fix descriptions of keys involving meta when showing keymaps
+
+2018-02-23  Justin Burkett  <justin@burkett.cc>
+
+	Autoload the show keymap functions
+
+2018-02-23  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-show-full-keymap
+
+	Command to show all bindings in a keymap recursively.
+
+	Add test for new which-key--get-keymap-bindings functionality.
+
+2018-02-23  Justin Burkett  <justin@burkett.cc>
+
+	Extract which-key--ignore-keys-regexp and which-key-show-keymap-1
+
+2018-01-31  Justin Burkett  <justin@burkett.cc>
+
+	Improve which-key--format-and-replace
+
+	Do a better job with nil descriptions
+
+2018-01-31  Justin Burkett  <justin@burkett.cc>
+
+	Handle null description in which-key--propertize-description
+
+	Fixes #186
+
+2018-01-31  Justin Burkett  <justin@burkett.cc>
+
+	Use safe version of propertize
+
+	Should fix #186
+
+2018-01-31  Justin Burkett  <justin@burkett.cc>
+
+	Fix description truncation when showing docstrings
+
+2018-01-31  Justin Burkett  <justin@burkett.cc>
+
+	Improve which-key-show-docstrings option
+
+	Add setting docstring-only to omit command names. Add
+	which-key-docstring-face.
+
+	See #185
+
+2018-01-30  Justin Burkett  <justin@burkett.cc>
+
+	Add option to show docstrings in which-key buffer
+
+	Implements a simple version of the suggestion in #185
+
+2018-01-08  Justin Burkett  <justin@burkett.cc>
+
+	Remove debugging message
+
+2018-01-08  Justin Burkett  <justin@burkett.cc>
+
+	Implement #182
+
+	Allow single digit arg to be set after C-h
+
+2018-01-08  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.1.0
+
+2017-12-17  Justin Burkett  <justin@burkett.cc>
+
+	Fix and improve define-key based replacements
+
+	Check for equality of definition as well as the key sequence. Unless
+	it's a prefix binding, in which case only check the key sequence.
+
+	Make sure we apply kbd when looking up pseudo bindings.
+
+	Move the logic into which-key--get-pseudo-binding.
+
+2017-12-17  Jonas Bernoulli  <jonas@bernoul.li>
+
+	Define which-key--current-key-list before using it
+
+	Actually move the definition of the caller which-key--pseudo-key 
+	instead.
+
+2017-12-16  Justin Burkett  <justin@burkett.cc>
+
+	Simplify implementation of define-key based replacements
+
+	When a description is provided through define-key using a definition 
+	like ("description" . def) place a additional binding in the map to a
+	"pseudo key" making it easy for which-key to find these descriptions on
+	the fly and at the right time (i.e., when the binding is active).
+
+	which-key-enable-extended-define-key must be enabled for this to have an 
+	effect.
+
+2017-12-15  Justin Burkett  <justin@burkett.cc>
+
+	Improve which-key--process-define-key-args
+
+	Specify Prefix Command as an explicit match string to cut down on false 
+	positives.
+
+2017-12-13  Justin Burkett  <justin@burkett.cc>
+
+	Announce which-key-enable-extended-define-key in README
+
+2017-12-13  Justin Burkett  <justin@burkett.cc>
+
+	Demote errors in which-key--process-define-key-args
+
+2017-12-13  Justin Burkett  <justin@burkett.cc>
+
+	Fix .travis.yml
+
+	Didn't install cask
+
+2017-12-13  Justin Burkett  <justin@burkett.cc>
+
+	Fix travis build
+
+	Add support for 25.3. Remove for 24.3
+
+2017-12-13  Justin Burkett  <justin@burkett.cc>
+
+	Allow null DEF in which-key--process-define-key-args
+
+	This is useful for naming prefixes
+
+2017-12-13  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-enable-extended-define-key customization option
+
+	Adds supporting which-key--process-define-key-args.
+
+	The docstring for the option is
+
+	Advise `define-key' to make which-key aware of definitions of the form
+
+	  (define-key KEYMAP KEY '("DESCRIPTION" . DEF))
+
+	With the advice, this definition will have the side effect of creating a 
+	replacement in `which-key-replacement-alist' that replaces DEF with
+	DESCRIPTION when the key sequence ends in KEY. Using a cons cell like
+	this is a valid definition for `define-key'. All this does is to make
+	which-key aware of it.
+
+	Since many higher level keybinding functions use `define-key'
+	internally, this will affect most if not all of those as well.
+
+	This variable must be set before loading which-key.
+
+2017-12-07  Justin Burkett  <justin@burkett.cc>
+
+	Fix ordering of default replacement-alist
+
+	When which-key-allow-multiple-replacements is nil, this order is
+	required to get the intended behavior with left and right.
+
+	Ref #181
+
+2017-12-05  Justin Burkett  <justin@burkett.cc>
+
+	Add notes about paging commands not working with minibuffer
+
+2017-11-14  Justin Burkett  <justin@burkett.cc>
+
+	Re-indent README
+
+2017-11-14  Justin Burkett  <justin@burkett.cc>
+
+	Mention which-key-show-major-mode in README
+
+2017-11-14  Justin Burkett  <justin@burkett.cc>
+
+	Consolidate use of binding filters
+
+2017-11-14  Justin Burkett  <justin@burkett.cc>
+
+	Improve echo area note for which-key-show-major-mode
+
+2017-11-13  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-show-major-mode
+
+	This is a new function to discover bindings, including evil ones, in the
+	keymap of the current major mode. It should be considered experimental
+	at the moment.
+
+2017-08-17  Justin Burkett  <justin@burkett.cc>
+
+	Update which-key version for GNU ELPA
+
+2017-08-08  Justin Burkett  <justin@burkett.cc>
+
+	Make minor changes to commentary in which-key.el
+
+2017-08-07  Justin Burkett  <justin@burkett.cc>
+
+	Assign copyright to FSF for ELPA
+
+2017-05-30  Justin Burkett  <justin@burkett.cc>
+
+	Fix which-key-show-remaining-keys option
+
+2017-05-28  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.0.1
+
+2017-05-27  Justin Burkett  <justin@burkett.cc>
+
+	Handle C-h when buffer not showing
+
+	which-key-C-h-dispatch was not doing anything different if the which-key
+	buffer was not showing. This makes it fall back to the standard Emacs
+	behavior.
+
+	Fixes #172
+
+2017-05-20  Jimmy Yuen Ho Wong	<wyuenho@users.noreply.github.com>
+
+	Customize which-key-sort-order with list
+
+	This will display a list the user can choose from in customize instead
+	of having them to type
+
+2017-05-19  Justin Burkett  <justin@burkett.cc>
+
+	Adhere to 80 chars per column
+
+2017-05-19  Justin Burkett  <justin@burkett.cc>
+
+	Use regexp-opt for regexps
+
+	* which-key.el (which-key--get-keymap-bindings): Update
+
+2017-05-19  Justin Burkett  <justin@burkett.cc>
+
+	Fixup previous commit
+
+	* which-key.el (which-key--compute-binding): Need to copy name of
+	remapped
+	 command
+
+	Fixes #170
+
+2017-05-19  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-compute-remaps option
+
+	* which-key.el (which-key--compute-binding): Add
+	(which-key--get-current-bindings): Modify to use prev function
+	(which-key-compute-remaps): Add option
+
+	Fixes #169
+
+2017-05-16  Justin Burkett  <justin@burkett.cc>
+
+	Version 3.0
+
+2017-05-16  Justin Burkett  <justin@burkett.cc>
+
+	Prepare for ELPA release
+
+	Update min emacs version to 24.4 to remove backported functions. Remove
+	outdated comments.
+
+2017-05-16  Justin Burkett  <justin@burkett.cc>
+
+	Add .cask to gitignore
+
+2017-05-16  Justin Burkett  <justin@burkett.cc>
+
+	Update emacs versions for Travis
+
+2017-05-01  Justin Burkett  <justin@burkett.cc>
+
+	Make -init-buffer-hook a custom var
+
+2017-04-26  Justin Burkett  <justin@burkett.cc>
+
+	Add option to show transient maps
+
+	Set which-key-show-transient-maps to a non-nil value to use this
+	feature.
+
+	When a transient map is active and it is not a hydra, show the keys from
+	the map.
+
+	Fixes #164
+
+2017-04-18  Justin Burkett  <justin@burkett.cc>
+
+	Improve which-key--any-match-p
+
+2017-04-07  Justin Burkett  <justin@burkett.cc>
+
+	Fix customize type for replacement-alist
+
+	Ref #165
+
+2017-03-15  Justin Burkett  <justin@burkett.cc>
+
+	Fix replacement of keys when prefix is nil
+
+	The prefix is nil at the top-level keymap
+
+	Fixes #163
+
+2017-02-09  Justin Burkett  <justin@burkett.cc>
+
+	Fix handling of key ranges ("a .. d")
+
+	When the last key in the key sequence is a range, extract the whole
+	range instead of just the final key.
+
+	Fixes #161
+
+2017-02-07  Justin Burkett  <justin@burkett.cc>
+
+	Version 2.0
+
+	Increased major version for replacement list changes
+
+2016-12-22  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-show-prefix 'mode-line option
+
+	See #157
+
+2016-12-20  Justin Burkett  <justin@burkett.cc>
+
+	Update README
+
+2016-12-20  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-max-display-columns
+
+	See #157
+
+2016-12-15  Justin Burkett  <justin@burkett.cc>
+
+	Remove unused variable
+
+2016-12-15  Justin Burkett  <justin@burkett.cc>
+
+	Fix #156 by allowing multiple replacements
+
+	Add which-key-allow-multiple-replacements which can be set to allow
+	multiple replacements from which-key-replacement-alist to apply to a key
+	binding.
+
+	Switch from using assoc-default to find replacements to 
+	which-key--get-replacements.
+
+	Adjusts tests and add a new one for multiple replacements.
+
+2016-12-12  Justin Burkett  <justin@burkett.cc>
+
+	Tweak TOC in README and fix a link
+
+2016-12-07  Justin Burkett  <justin@burkett.cc>
+
+	Add a missing type declaration
+
+2016-12-05  Justin Burkett  <justin@burkett.cc>
+
+	Prevent display from occurring twice in a row
+
+	Found some cases where this could happen with a secondary idle delay.
+
+2016-12-05  Justin Burkett  <justin@burkett.cc>
+
+	Add basic timing facility for debugging.
+
+2016-12-01  Justin Burkett  <justin@burkett.cc>
+
+	Remove old obsolete variables/functions
+
+2016-12-01  Justin Burkett  <justin@burkett.cc>
+
+	Add some docstrings
+
+2016-12-01  Justin Burkett  <justin@burkett.cc>
+
+	Remove some unused functions
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Fixup last commit part 2
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Fixup last commit
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Support functions in -add-key-based-replacements
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Fix links to users in README
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Add @pdcawley's example to README
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Add test for #155
+
+2016-11-30  Justin Burkett  <justin@burkett.cc>
+
+	Fix bug in last commit
+
+	The regexp-quote docstring is misleading since (regexp-quote "SPC x")
+	will match
+	"SPC x c". Added back the beginning and end markers in the regexp.
+
+2016-11-29  Justin Burkett  <justin@burkett.cc>
+
+	Quote regexp in -add-key-based-replacements
+
+	Should fix #154
+
+2016-11-29  Justin Burkett  <justin@burkett.cc>
+
+	Fix a README link
+
+2016-11-29  Justin Burkett  <justin@burkett.cc>
+
+	Normalize key sequences from -add-key-based-replacements
+
+2016-11-28  Justin Burkett  <justin@burkett.cc>
+
+	Simplify --format-and-replace
+
+2016-11-25  Justin Burkett  <justin@burkett.cc>
+
+	Fix use of function in -replacement-alist
+
+	Wasn't actually deleting nil results
+
+2016-11-25  Justin Burkett  <justin@burkett.cc>
+
+	Don't use case-fold-search in --maybe-replace
+
+	See
+	https://github.com/syl20bnr/spacemacs/issues/7837#issuecomment-262938480
+
+2016-11-22  Justin Burkett  <justin@burkett.cc>
+
+	Update test
+
+2016-11-21  Justin Burkett  <justin@burkett.cc>
+
+	Consolidate replacements into one alist
+
+	New list is which-key-replacement-alist. See docstring.
+
+	The following lists are deprecated. Some basic backwards compatibility
+	is attempted, but more complicated configs will likely break.
+
+	which-key-key-replacement-alist 
+	which-key-key-based-description-replacement-alist 
+	which-key-description-replacement-alist
+
+	which-key-binding-filter-function was removed, since it's functionality
+	is mostly replaced by which-key-replacement-alist
+
+	Updated README
+
+2016-11-06  Justin Burkett  <justin@burkett.cc>
+
+	Move sort after filter op in --get-formatted-key-bindings
+
+2016-10-31  Justin Burkett  <justin@burkett.cc>
+
+	Update comment in --show-buffer-side-window for prior change
+
+2016-10-31  Justin Burkett  <justin@burkett.cc>
+
+	Remove use of display-buffer-in-major-side-window
+
+	According to emacs bug #24828, this is an internal function and should 
+	not be used. Following the advice from that report, switch to 
+	display-buffer-in-side-window and add an option for the user to specify 
+	the slot value for that function.
+
+	Fixes #146
+
+2016-10-29  Justin Burkett  <justin@burkett.cc>
+
+	Add which-key-binding-filter-function
+
+	Can be used to arbitrarily manipulate key bindings, including deleting 
+	them, before they are processed by which-key. See docstring for usage.
+
+	Fixes #152 https://github.com/syl20bnr/spacemacs/issues/7582
+
+2016-10-29  Justin Burkett  <justin@burkett.cc>
+
+	Add sort option -prefix-then-key-order-reverse
+
+	Fixes #145
+
+2016-10-29  Justin Burkett  <justin@burkett.cc>
+
+	Add global option for how to sort case
+
+	which-key-sort-uppercase-first (default t)
+
+	See #145
+
+2016-10-16  Hariharan R	 <hariharanrangasamy@gmail.com>
+
+	fix link
+
+2016-10-05  Justin Burkett  <justin@burkett.cc>
+
+	Fix test for recent prefix-name change
+
+2016-10-05  Justin Burkett  <justin@burkett.cc>
+
+	Make 458c8d9 backwards compatible
+
+	The prefix titles need to be in cons cells to stay consistent with how 
+	they were used before.
+
+2016-10-05  Justin Burkett  <justin@burkett.cc>
+
+	Move a function for the compiler
+
+2016-10-05  Justin Burkett  <justin@burkett.cc>
+
+	Consolidate prefix names and key-based replacements
+
+	Make obsolete several redundant functions, the most important of which 
+	is which-key-declare-prefixes. This is just an alias for 
+	which-key-add-key-based-replacements now. The additional functionality 
+	that declare-prefixes had (for declaring prefix titles) is now rolled 
+	into the add-key-based-replacements function. See that functions doc 
+	string.
+
+2016-10-04  Justin Burkett  <justin@burkett.cc>
+
+	Fix -maybe-get-prefix-title use of key-binding
+
+	key-binding doesn't work with all forms of key strings.
+
+	See #143
+
+2016-09-11  justbur  <justin@burkett.cc>
+
+	Resize popup when frame resized
+
+	Fixes #139
+
+2016-08-31  Justin Burkett  <justin@burkett.cc>
+
+	Merge pull request #137 from tarsius/outlines
+
+	Follow conventions for section headers
+
+2016-09-01  Jonas Bernoulli  <jonas@bernoul.li>
+
+	Follow conventions for section headers
+
+	Doing so allows the use of `outline-minor-mode' makes it possible to
+	navigate sections similarly to how that is done in `org-mode'.
+
+2016-08-31  Jonas Bernoulli  <jonas@bernoul.li>
+
+	Move definition of which-key--local-binding-p
+
+	It has to be defined after the inline functions which it uses.
+
+2016-08-17  Justin Burkett  <justin@burkett.cc>
+
+	Version 1.1.15
+
+2016-08-17  Justin Burkett  <justin@burkett.cc>
+
+	Add note about setting delay to zero
+
+2016-08-17  Justin Burkett  <justin@burkett.cc>
+
+	Fix minibuffer echo not displaying
+
+	See #133
+
+2016-07-28  justbur  <justin@burkett.cc>
+
+	Version 1.1.14
+
+	Tagged wrong commit
+
+2016-07-28  justbur  <justin@burkett.cc>
+
+	Disable hack for echo area
+
+	Seems to cause more problems (like completion commands sometimes being 
+	overwritten) than it solves.
+
+2016-07-27  justbur  <justin@burkett.cc>
+
+	Fix Makefile
+
+2016-07-09  justbur  <justin@burkett.cc>
+
+	Add allow-imprecise-window-fit option
+
+	Possible fix for #130
+
+	When enabled this option avoids the use of fit-window-to-buffer to 
+	resize the popup. My profiling suggested that emacs was spending a lot 
+	of time in this function (and hanging sometimes) with different fonts. I 
+	noticed this with Roboto Mono on MSWindows, which should explain #130.
+
+2016-07-06  justbur  <justin@burkett.cc>
+
+	Explicitly set tab-width when collecting bindings
+
+	For some reason indent-tabs-mode doesn't use tabs with strange 
+	tab-widths.
+
+	See https://github.com/syl20bnr/spacemacs/issues/6497
+
+2016-07-05  justbur  <justin@burkett.cc>
+
+	Fix previous commit
+
+2016-07-05  justbur  <justin@burkett.cc>
+
+	Add whitelist and blacklist options
+
+	which-key-allow-regexps is a list of regexps that allow the popup when 
+	one is matched
+
+	which-key-inhibit-regexps inhibits the popup when one regexp matches
+
+	The string matched against is the current key sequence as produced by 
+	key-description.
+
+	Fixes #129
+
+2016-06-17  justbur  <justin@burkett.cc>
+
+	Remove setup code
+
+	It's no longer necessary and makes changing echo-keystrokes annoying.
+
+2016-06-16  justbur  <justin@burkett.cc>
+
+	Make current-prefix nil when not showing popup
+
+2016-06-16  justbur  <justin@burkett.cc>
+
+	Use sit-for instead of timer for delay functions
+
+2016-06-14  justbur  <justin@burkett.cc>
+
+	Fix arg to which-key-delay-functions
+
+2016-06-14  justbur  <justin@burkett.cc>
+
+	Redesign delayed keys implementation
+
+	Everything is controlled through which-key-delay-functions now.
+
+	Ref #128
+
+2016-06-09  justbur  <justin@burkett.cc>
+
+	Fix bug in previous commit
+
+2016-06-09  justbur  <justin@burkett.cc>
+
+	Introduce delayed prefixes
+
+	One version of idea in #128. This design is subject to change.
+
+2016-05-27  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-05-27  justbur  <justin@burkett.cc>
+
+	Fix performance issue with secondary timer
+
+	The secondary timer option was restarting the timer every time through 
+	the update function, which caused the cpu to max out. Adds a flag so 
+	that the timer is only restarted when necessary.
+
+	Fixes #126
+
+2016-05-26  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-05-26  justbur  <justin@burkett.cc>
+
+	Fix --echo when echo-keystrokes nil
+
+2016-05-24  justbur  <justin@burkett.cc>
+
+	Remove some unused code in comments
+
+2016-05-24  justbur  <justin@burkett.cc>
+
+	Change name of arg in define-key-recursively
+
+	Also clarify docstring
+
+2016-05-16  justbur  <justin@burkett.cc>
+
+	New screenshots
+
+2016-05-16  justbur  <justin@burkett.cc>
+
+	More cleanup of README
+
+2016-05-16  justbur  <justin@burkett.cc>
+
+	README typo
+
+2016-05-16  justbur  <justin@burkett.cc>
+
+	Fix comment about special keys in README
+
+2016-05-16  justbur  <justin@burkett.cc>
+
+	Update docs for new sort function
+
+2016-05-16  justbur  <justin@burkett.cc>
+
+	Add which-key-local-then-key-order
+
+	To use (setq which-key-sort-order 'which-key-local-then-key-order)
+
+	See #125
+
+2016-05-13  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-05-12  justbur  <justin@burkett.cc>
+
+	Account for echo-keystrokes = which-key-idle-delay
+
+	Ref #123
+
+2016-05-07  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-05-07  Chen Bin  <chenbin.sh@gmail.com>
+
+	tooltip-mode does in exist in emacs-nox #120
+
+2016-05-05  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-05-05  justbur  <justin@burkett.cc>
+
+	Backport two frame width functions for 24.3 support
+
+	Fixes #119
+
+2016-04-27  Junpeng Qiu	 <qjpchmail@gmail.com>
+
+	Fix god mode advice
+
+	See https://github.com/justbur/emacs-which-key/pull/115
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Merge branch 'god-mode'
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Add advice for god-mode support to hide popup
+
+	The standard way to hide the popup before the command is not working.
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Fix minor issues with god-mode support
+
+	Make sure advice is activated for god-mode-lookup-command
+
+	Check for null which-key--god-mode-key-string
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Better default for which-key-echo-keystrokes
+
+	Fixes #114
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Add third-party section to which-key.el
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Add third-party support section to readme
+
+2016-04-26  justbur  <justin@burkett.cc>
+
+	Add support for god-mode
+
+	Needs to be explicitly activated by calling
+	(which-key-enable-god-mode-support)
+
+2016-04-19  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-04-19  justbur  <justin@burkett.cc>
+
+	Use new history var for keymap selection
+
+2016-04-17  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-04-17  justbur  <justin@burkett.cc>
+
+	Explicitly initialize variable-name-history
+
+	See #110
+
+2016-04-17  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-04-17  justbur  <justin@burkett.cc>
+
+	Declare variable-name-history
+
+	Fixes #110
+
+2016-04-10  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-04-10  justbur  <justin@burkett.cc>
+
+	Support key ranges below top level
+
+2016-04-06  justbur  <justin@burkett.cc>
+
+	Add badge
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Trigger travis
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Set up travis
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Fix problem where prefix-title-alist was not updated
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Fix docstring typo
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Add tests
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2016-04-05  justbur  <justin@burkett.cc>
+
+	Fix bug in declare-prefixes-for-mode
+
+	Fixes #109
+
+2016-03-31  justbur  <justin@burkett.cc>
+
+	Fix key-chord problem
+
+	See the note in which-key--update
+
+2016-03-31  justbur  <justin@burkett.cc>
+
+	Support key-chord
+
+	Fixes #108
+
+2016-03-21  justbur  <justin@burkett.cc>
+
+	Version 1.0
+
+2016-03-21  justbur  <justin@burkett.cc>
+
+	Cleanup for 1.0 release
+
+2016-03-17  justbur  <justin@burkett.cc>
+
+	Make show-standard-help narrow to prefix
+
+	This is what describe-prefix-bindings does and it should be consistent.
+
+2016-03-14  justbur  <justin@burkett.cc>
+
+	Shorten lighter name
+
+2016-03-13  Will S. Medrano  <will.s.medrano@gmail.com>
+
+	made minor mode lighter customizable
+
+2016-03-10  justbur  <justin@burkett.cc>
+
+	Disable special-keys option by default
+
+	It's probably too surprising to have enabled by default.
+
+2016-03-10  justbur  <justin@burkett.cc>
+
+	Fix compiler warnings
+
+	Fixes #106
+
+2016-03-03  justbur  <justin@burkett.cc>
+
+	Increment version
+
+2016-03-03  justbur  <justin@burkett.cc>
+
+	Fix bug when show-prefix is left and there is one line
+
+	Fixes #104
+
+2016-02-29  justbur  <justin@burkett.cc>
+
+	Export reload-key-sequence function
+
+	Fixes #103
+
+2016-02-13  USAMI Kenta	 <tadsan@zonu.me>
+
+	Disable show-trailing-whitespace
+
+2016-02-09  justbur  <justin@burkett.cc>
+
+	Add missing case for which-key-show-prefix
+
+	nil is a valid value for this option.
+
+2016-02-06  justbur  <justin@burkett.cc>
+
+	Add which-key-is-verbose
+
+	Allows one to silence messages which may not indicate an error.
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Refactor create-pages and show-page
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Improve some function names
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Don't pass window-width around
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Fix problems with operator keymap function
+
+	1. Introduce using-show-keymap and using-show-operator-keymap vars to 
+	make it clear how we are entering which-key
+
+	2. Add inhibit-next-operator-keymap for keys in the operator maps that 
+	are bound to commands that read the next key "manually"
+
+	3. Fix problem where the next page hint was only being shown sometimes 
+	in the operator maps. Need to distinguish between show-operator-keymap 
+	and the possibility that an operator is active but the usual which-key 
+	popup is showing.
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Simplify page turning function
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Use keyboard-quit in abort key sequence
+
+	Need to do this for the operator keymap function. Otherwise the operator 
+	state doesn't exit properly
+
+2016-02-03  justbur  <justin@burkett.cc>
+
+	Comment out window var and add new func
+
+	The window var is not being used.
+
+2016-01-29  justbur  <justin@burkett.cc>
+
+	Don't listify key sequence repeatedly
+
+	This function is not idempotent it turns out.
+
+2016-01-29  justbur  <justin@burkett.cc>
+
+	Interpret ESC in operator popup
+
+	See #99
+
+2016-01-28  justbur  <justin@burkett.cc>
+
+	Improve previous commit
+
+	Filter out keys with :suppress-keymap property, which seem to be the 
+	primary ones ignored in operator state
+
+2016-01-28  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' of https://github.com/justbur/emacs-which-key
+
+2016-01-28  justbur  <justin@burkett.cc>
+
+	Initial try at addressing #99
+
+2016-01-26  Colin Yates	 <colin@colinyates.co.uk>
+
+	Trivial fix correcting SpacEmacs
+
+2016-01-17  justbur  <justin@burkett.cc>
+
+	Add which-key-idle-secondary-delay
+
+	Allows the delay time to be different for popups that follow an initial 
+	popup within the same key sequence.
+
+2016-01-11  justbur  <justin@burkett.cc>
+
+	Fix problem with side-window dimension calculation
+
+	The fringes were not being included in version 24. This makes the 
+	calculation consistent with the left/right side-window calculation and 
+	fixes #97.
+
+2015-12-21  justbur  <justin@burkett.cc>
+
+	Fix C-h prompt for show-keymap commands
+
+2015-12-20  justbur  <justin@burkett.cc>
+
+	Fix undo for show-keymap
+
+2015-12-20  justbur  <justin@burkett.cc>
+
+	Distinguish using-show-keymap
+
+2015-12-20  justbur  <justin@burkett.cc>
+
+	Allow traversal of keymaps in new commands
+
+2015-12-20  justbur  <justin@burkett.cc>
+
+	Filter out empty keymaps in new functions
+
+2015-12-20  justbur  <justin@burkett.cc>
+
+	Add which-key-show-minor-mode-keymap
+
+	Version of which-key-show-keymap that only looks in minor-mode-map-alist
+
+2015-12-20  justbur  <justin@burkett.cc>
+
+	Add which-key-show-keymap
+
+	Basic version of this command that only shows the top-level of a keymap. 
+	Waiting for feedback on how this should work.
+
+2015-12-17  justbur  <justin@burkett.cc>
+
+	New stable version
+
+2015-12-11  justbur  <justin@burkett.cc>
+
+	Ignore evil-state bindings
+
+	These are the fake keys that evil uses to store maps under
+
+2015-12-10  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' of https://github.com/justbur/emacs-which-key
+
+2015-12-10  justbur  <justin@burkett.cc>
+
+	Add which-key-init-buffer-hook
+
+2015-12-09  Amory Meltzer  <Amorymeltzer@gmail.com>
+
+	Document which-key-prefix-prefix
+
+	https://github.com/justbur/emacs-which-key/commit/30bc0c224bac091fcf2759c8e8853e7237196090
+
+2015-12-08  justbur  <justin@burkett.cc>
+
+	Allow custom prefix-prefix
+
+	Suggested in #90. Thanks @Amorymeltzer
+
+2015-12-06  justbur  <justin@burkett.cc>
+
+	Tweak display of key sequence in one case
+
+	This is for the C-h commands when the which-key message is not shown in 
+	the echo area but the echo-keystrokes prefix is
+
+2015-12-06  justbur  <justin@burkett.cc>
+
+	echo-keystrokes should never be nil
+
+	The correct test is to test if it's 0.
+
+2015-12-05  justbur  <justin@burkett.cc>
+
+	Preserve prefx-arg when paging
+
+2015-12-04  justbur  <justin@burkett.cc>
+
+	Work on handling prefix args better
+
+2015-12-04  justbur  <justin@burkett.cc>
+
+	Make C-h command hint respect C-h-map commands
+
+2015-12-03  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' of https://github.com/justbur/emacs-which-key
+
+2015-12-03  justbur  <justin@burkett.cc>
+
+	Don't abort key seq after unbound key in C-h-map
+
+	Allows to recover from accidentally pressing C-h.
+
+	This commit also fixes some echo area problems that become apprent after 
+	introducing the C-h-map stuff
+
+2015-12-03  Justin Burkett  <justin@burkett.cc>
+
+	Clarify C-h commands description in readme
+
+2015-12-03  justbur  <justin@burkett.cc>
+
+	Fix top-level note and satisfy compiler
+
+2015-12-03  justbur  <justin@burkett.cc>
+
+	Add C-h commands to what's new in readme
+
+	Still need to update the rest of the content
+
+2015-12-03  justbur  <justin@burkett.cc>
+
+	Fix note on right and add abort keys
+
+2015-12-03  justbur  <justin@burkett.cc>
+
+	Fix undo and timer usage
+
+2015-12-02  justbur  <justin@burkett.cc>
+
+	Introduce C-h command dispatch function
+
+	Replace role of show-next-page with C-h-dispatch which immediately reads 
+	a key and calls a command from C-h-map, which may be one of several 
+	paging commands, a command to undo the last keypress, or a command to 
+	directly access describe-prefix-bindings.
+
+	This commit does not include documenting these changes in the readme.
+
+	Note that several options become deprecated here as they no longer have 
+	the same (if any effect).
+
+2015-12-01  justbur  <justin@burkett.cc>
+
+	Remove dependencies from README
+
+2015-11-30  justbur  <justin@burkett.cc>
+
+	Cleanup make-text-button call
+
+2015-11-30  justbur  <justin@burkett.cc>
+
+	Fix return value problem for make-text-button
+
+	Apparently in versions before 24.5 the return value was not always the 
+	button itself when a string was used as the argument
+
+2015-11-30  justbur  <justin@burkett.cc>
+
+	Merge branch 'grammati'
+
+2015-11-30  justbur  <justin@burkett.cc>
+
+	Use safe version of string-width
+
+2015-11-30  justbur  <justin@burkett.cc>
+
+	Use key-description for canonical keys
+
+	This takes the idea in the previous commit and translates the 
+	representations of keys in the alists to be the output of 
+	key-description. The issue is that `M-x` for example has two 
+	representations with listify-key-sequence, but only one (it seems) from 
+	key-description.
+
+2015-11-28  Chris Perkins  <chrisperkins99@gmail.com>
+
+	Display prefix names in terminal-mode
+
+	When running emacs in a terminal (or at least, in iTerm), keys are not 
+	passed through to emacs the same way that they are in graphical mode.
+
+	For example, M-m (important in spacemacs) is the key-sequence
+	`[134217837]` in graphical emacs, but `[27 109]` ("ESC m") in terminal.
+
+	The variable `which-key-prefix-name-alst` only has a mapping for the 
+	former (the 134217837), and so the names of submenus all show up as
+	"+prefix", limiting discoverability.
+
+	This commit converts the key sequence into a canonical form (eg: 
+	converts `[27 109]` into `[134217837]`) in
+	`which-key--maybe-replace-prefix-name`, so that the prefixes are found.
+
+	I think some work is probably needed for
+	`which-key-prefix-title-alist` too, but I'm not entirely sure what 
+	that's used for, so I didn't mess with it.
+
+2015-11-20  justbur  <justin@burkett.cc>
+
+	Add README note about last commit
+
+2015-11-20  justbur  <justin@burkett.cc>
+
+	Show docstring on hover in echo area for commands
+
+2015-11-20  justbur  <justin@burkett.cc>
+
+	Fix mistake in reverting defaults
+
+	Ref 9dd0ceaaabe6b4ac5f3268747b6103fb04d65e5f
+
+	Accidentally changed the side window location instead of the show-prefix 
+	one.
+
+2015-11-19  Junpeng Qiu	 <qjpchmail@gmail.com>
+
+	Fix the value of `which-key-side-window-location'
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Check for nil as a binding in previous commit
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Provide alternate prefix-title for echo area
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Forgot line in last commit
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Revert change in default of side-window-bottom
+
+	Not happy with the look of it yet, even though it's probably better to 
+	avoid the echo area
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Automatically close popup when prefix goes away
+
+	It was necessary to hit C-g twice to close the popup before this change.
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Provide alternative for prefix-title
+
+	If echo-keystrokes is non nil, we're showing in the bottom window, and 
+	the prefix is shown in the top or bottom line, there's not much reason 
+	to show the prefix again since it's so close to the echo area.
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Fix spacing in last commit
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Mention new show-prefix option and format README
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Add show-prfx 'bottom and change top-level msg
+
+	'bottom is a "safer" default because it's impossible to control the echo 
+	area completely, so the message gets wiped out occasionally.
+
+	Use prefix-titles for the top-level bindings message, since top-level is 
+	not really a key
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Ignore key translations only at top-level
+
+	C-x 8 is a valid place to put translations for example
+
+2015-11-18  justbur  <justin@burkett.cc>
+
+	Option to remove default unicode characters
+
+2015-11-18  Syohei YOSHIDA  <syohex@gmail.com>
+
+	Use bound-and-true-p for byte compile warning
+
+2015-11-18  Syohei YOSHIDA  <syohex@gmail.com>
+
+	Move definition position for byte-compile warning
+
+2015-11-17  justbur  <justin@burkett.cc>
+
+	Sort character ranges properly
+
+	Fix #85
+
+2015-11-16  justbur  <justin@burkett.cc>
+
+	Make special-key matching case sensitive
+
+2015-11-16  justbur  <justin@burkett.cc>
+
+	Refactor sorting functions and move fn keys up
+
+2015-11-16  justbur  <justin@burkett.cc>
+
+	Silence warnings for obsolete function
+
+2015-11-16  justbur  <justin@burkett.cc>
+
+	Turn on case-sensitivity in replacements
+
+	Should avoid situations like #84
+
+2015-11-16  justbur  <justin@burkett.cc>
+
+	Satisfy compiler
+
+2015-11-16  justbur  <justin@burkett.cc>
+
+	Bring in new describe-buffer-bindings parsing func
+
+	based on similar function in helm-descbinds. This parses the output of 
+	describe-buffer-bindings line by line, and is easier to follow and 
+	manipulate than the previous one that uses complicated regexp 
+	expressions.
+
+2015-11-15  justbur  <justin@burkett.cc>
+
+	Mention show-top-level in the README
+
+2015-11-13  justbur  <justin@burkett.cc>
+
+	Minor stylistic changes to previous pr
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Ignore self-insert-command bindings
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Include keybindings of the form 'a .. z' in which key popup
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Use `set-temporary-overlay-map` to setup paging keys for toplevel popup
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Manually flush headings for keybindings
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Allow function key bindings to be displayed in toplevel help
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Add a command to popup toplevel bindings
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Fix some minor bugs
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Improve regexp to match toplevel bindings
+
+2015-11-13  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Change code to handle nil which-key--current-prefix
+
+	This would happen when viewing toplevel bindings
+
+2015-11-13  justbur  <justin@burkett.cc>
+
+	Fix sort order of function keys
+
+2015-11-13  justbur  <justin@burkett.cc>
+
+	Don't use face for prefix if using echo area
+
+	With some themes the switch from the text from echo-keystrokes with no 
+	face to the which-key text with a face is annoying.
+
+2015-11-12  justbur  <justin@burkett.cc>
+
+	Bump minor version
+
+2015-11-12  justbur  <justin@burkett.cc>
+
+	Add option to pad key columns on the left
+
+	Allows you to make more space between the columns if you think the 
+	layout is too tight.
+
+2015-11-03  justbur  <justin@burkett.cc>
+
+	Fix #79
+
+	Explicitly set word-wrap in which-key buffer. Fix unicode correction
+
+2015-11-03  justbur  <justin@burkett.cc>
+
+	Add example of adding Unicode replacements in README
+
+	Thanks @epitzer for the suggestion. 
+	https://github.com/justbur/emacs-which-key/issues/52
+
+2015-10-29  justbur  <justin@burkett.cc>
+
+	Don't show help hint for evil operators
+
+	Paging and help doesn't work for these, so don't offer
+
+2015-10-29  justbur  <justin@burkett.cc>
+
+	Add option to show popup for evil operators
+
+	Default is to enable if evil is loaded before which-key. Otherwise, it 
+	is disabled.
+
+2015-10-28  justbur  <justin@burkett.cc>
+
+	Add melpa stable banner
+
+2015-10-22  justbur  <justin@burkett.cc>
+
+	Don't warn when same cons is added to alist twice
+
+2015-10-20  justbur  <justin@burkett.cc>
+
+	Move sorting functions and add to readme
+
+2015-10-18  justbur  <justin@burkett.cc>
+
+	Better choices for built-in functions
+
+	Thanks @xuchunyang!
+
+2015-10-18  justbur  <justin@burkett.cc>
+
+	Cleanup previous commit
+
+2015-10-18  justbur  <justin@burkett.cc>
+
+	Remove dash.el dependency
+
+2015-10-18  justbur  <justin@burkett.cc>
+
+	Remove s.el dependency
+
+2015-10-15  justbur  <justin@burkett.cc>
+
+	Satisfy compiler for golden-ratio-mode
+
+2015-10-08  justbur  <justin@burkett.cc>
+
+	Preliminary support for undo
+
+2015-10-08  justbur  <justin@burkett.cc>
+
+	Add new sort function for testing
+
+	This is a variation on key order, which uses alphabetical sorting for 
+	characters, putting lowercase before uppercase.
+
+	@syl20bnr
+
+2015-10-07  justbur  <justin@burkett.cc>
+
+	Fix problem with two locations for side-window
+
+	Can't always reuse the same window in this case when we go to a deeper 
+	set of keybindings, because we may need to switch sides.
+
+2015-10-06  justbur  <justin@burkett.cc>
+
+	Switch to defun in last commit
+
+2015-10-06  justbur  <justin@burkett.cc>
+
+	Add new sort function
+
+	As suggested by @hmelman, sort by whether a key is a prefix or not (no 
+	prefix takes priority) then by key.
+
+2015-10-06  justbur  <justin@burkett.cc>
+
+	Bump version to 0.6.2
+
+2015-10-05  justbur  <justin@burkett.cc>
+
+	readme: Remove what's new and add dependency note
+
+2015-10-03  justbur  <justin@burkett.cc>
+
+	Remove comment
+
+2015-10-03  justbur  <justin@burkett.cc>
+
+	Refactor show-next-page
+
+2015-10-03  justbur  <justin@burkett.cc>
+
+	Move golden-ratio-mode let binding
+
+	Let bind golden-ratio-mode earlier in show-page function which may help 
+	prevent golden-ratio from moving the whihc-key buffer
+
+2015-10-02  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Do not display which-key popup if an interactive command is in progress
+
+	This prevents the which-key popup from being displayed if
+	`read-key-sequence` is invoked from a command as opposed to the editor's 
+	main loop.
+
+	The changes introduced in #b96481 and #6d20c0 have been removed since 
+	they are not needed now
+
+2015-10-02  justbur  <justin@burkett.cc>
+
+	Add remove-hook to previous commit
+
+2015-10-02  Iqbal Ansari  <iqbalansari02@yahoo.com>
+
+	Run `which-key--hide-popup` in post-command-hook also
+
+2015-10-01  justbur  <justin@burkett.cc>
+
+	Revert preserve-size setting on buffer
+
+	It's preventing the buffer from automatically shrinking
+
+2015-09-29  justbur  <justin@burkett.cc>
+
+	Let bind golden-ratio-mode when showing window
+
+	Prevents golden-ratio from changing size of which-key buffer
+
+	Fix #67
+
+2015-09-29  justbur  <justin@burkett.cc>
+
+	Add preserve-size option to side-window display
+
+	Beginning of fix for #67
+
+2015-09-27  justbur  <justin@burkett.cc>
+
+	Don't fail if buffer was killed somehow
+
+2015-09-24  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2015-09-24  justbur  <justin@burkett.cc>
+
+	Better fix for #65
+
+	Go back to using the original strategy of backing up
+	`prefix-help-command` but make sure it never gets set to
+	`which-key-show-next-page`.
+
+2015-09-23  justbur  <justin@burkett.cc>
+
+	Fix #65
+
+	Don't try to backup the value of `prefix-help-command` because it was 
+	getting set to `which-key-show-next-page` somehow creating an infinite 
+	recursion error. Just call `describe-prefix-bindings` directly, which 
+	should cover almost all cases.
+
+2015-09-22  justbur  <justin@burkett.cc>
+
+	Fix docstring typo
+
+	Thanks @hmelman
+
+2015-09-20  justbur  <justin@burkett.cc>
+
+	Add alist-name arg to add-key-val-to-alist
+
+	Otherwise the name of the alist is not available to this function
+
+2015-09-20  justbur  <justin@burkett.cc>
+
+	Add faces group
+
+2015-09-19  justbur  <justin@burkett.cc>
+
+	Better messages for add-key-val-to-alist
+
+2015-09-18  justbur  <justin@burkett.cc>
+
+	Remove some alists from customize and update docs
+
+	The helper functions should be used now due to the nature of the lists. 
+	Removing the variables from customize should encourage this.
+
+	Also add automatic conversion of old format of
+	`which-key-key-based-description-replacement-alist`.
+
+2015-09-18  justbur  <justin@burkett.cc>
+
+	Update README for key-based replacements
+
+2015-09-16  justbur  <justin@burkett.cc>
+
+	Add ability to highlight certain commands
+
+	Adds `which-key-highlighted-command-list` and
+	`which-key-highlighted-command-face` as user-customizable means of 
+	highlighting arbitrary commands (selected through regexp) with arbitrary 
+	faces.
+
+2015-09-09  Justin Burkett  <justin@burkett.cc>
+
+	typo in readme
+
+2015-09-08  justbur  <justin@burkett.cc>
+
+	Mute echo-keystrokes message
+
+	It seems to be too much information to display on *every* startup
+
+2015-09-03  justbur  <justin@burkett.cc>
+
+	Better warning for add-key-val-to-alist
+
+2015-09-03  justbur  <justin@burkett.cc>
+
+	Fix typo
+
+2015-09-03  justbur  <justin@burkett.cc>
+
+	Minor fix on last commit
+
+2015-09-03  justbur  <justin@burkett.cc>
+
+	Common interface for prefix names and titles
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Minor changes to key-seq functions
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Change default indentation of helpers
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Add support for prefix-names
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Make preventing C-h cycling the default
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Allow disabling truncation
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Add min-display-lines option
+
+	Ref #60
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Shorten next page hint
+
+	It's too long with the buffer on the right
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Factor out next page hint
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Change wording of hint
+
+2015-09-02  justbur  <justin@burkett.cc>
+
+	Add missing autoload
+
+	Fix #60
+
+2015-09-01  justbur  <justin@burkett.cc>
+
+	Describe new paging options in readme
+
+2015-09-01  justbur  <justin@burkett.cc>
+
+	Fix compiler warning
+
+2015-09-01  justbur  <justin@burkett.cc>
+
+	Fix implementation of prevent-C-h-from-cycling
+
+2015-09-01  justbur  <justin@burkett.cc>
+
+	Add experimental support for using descbinds
+
+	Adds a new variable which is disabled by default, called 
+	which-key-prevent-C-h-from-cycling. If both this new variable and 
+	which-key-use-C-h-for-paging are t, then C-h will page through to the 
+	last page, but then drop into the default emacs behavior of calling 
+	describe-prefix-bindings instead of cycling to page 1 again.
+
+2015-08-27  justbur  <justin@burkett.cc>
+
+	Fix echo-keystrokes backup
+
+2015-08-27  justbur  <justin@burkett.cc>
+
+	Fix which-key-echo-keystrokes docstring
+
+2015-08-16  justbur  <justin@burkett.cc>
+
+	Add helper function for prefix titles
+
+2015-08-15  justbur  <justin@burkett.cc>
+
+	One more change to format of prefix-title-alist
+
+2015-08-15  justbur  <justin@burkett.cc>
+
+	Switch prefix-titles to key-seq as key
+
+2015-08-15  justbur  <justin@burkett.cc>
+
+	Add support for "prefix titles". See #58
+
+2015-08-10  justbur  <justin@burkett.cc>
+
+	show-remaining-keys cleanup
+
+2015-08-10  justbur  <justin@burkett.cc>
+
+	Add missing save-match-data call
+
+2015-08-03  justbur  <justin@burkett.cc>
+
+	Tweak partition-columns
+
+2015-08-03  justbur  <justin@burkett.cc>
+
+	Fix ref to free var
+
+2015-08-03  justbur  <justin@burkett.cc>
+
+	Replace ?? with lambda by default
+
+2015-08-03  justbur  <justin@burkett.cc>
+
+	Clean-up partition-columns implementation
+
+2015-08-02  justbur  <justin@burkett.cc>
+
+	Add README intro to commentary section.
+
+2015-08-02  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2015-08-01  justbur  <justin@burkett.cc>
+
+	Allow for nil local-map. Fixes #57
+
+2015-07-30  justbur  <justin@burkett.cc>
+
+	README links working again
+
+2015-07-30  justbur  <justin@burkett.cc>
+
+	Second try to fix links
+
+2015-07-30  justbur  <justin@burkett.cc>
+
+	Fix a link in readme
+
+2015-07-30  justbur  <justin@burkett.cc>
+
+	Add local-map face to readme
+
+2015-07-28  justbur  <justin@burkett.cc>
+
+	Add local-map face
+
+	Possible solution for #45. Does not change any default settings.
+
+2015-07-28  justbur  <justin@burkett.cc>
+
+	README fixes
+
+2015-07-27  justbur  <justin@burkett.cc>
+
+	README typos
+
+2015-07-27  justbur  <justin@burkett.cc>
+
+	Reorg README and new pictures
+
+2015-07-27  Justin Burkett  <justin@burkett.cc>
+
+	Minor wording change to readme
+
+2015-07-27  justbur  <justin@burkett.cc>
+
+	Add note to readme
+
+2015-07-27  justbur  <justin@burkett.cc>
+
+	Revert "Fix some parts of readme"
+
+	This reverts commit a5413c2b8af110225fabbe64bcad4703c353327c.
+
+2015-07-27  justbur  <justin@burkett.cc>
+
+	More docstrings
+
+2015-07-27  justbur  <justin@burkett.cc>
+
+	Allow show-next-page to force update before timer
+
+2015-07-26  justbur  <justin@burkett.cc>
+
+	Add a docstring
+
+2015-07-26  justbur  <justin@burkett.cc>
+
+	Fix some parts of readme
+
+2015-07-26  justbur  <justin@burkett.cc>
+
+	C-h for paging is awesome
+
+2015-07-25  justbur  <justin@burkett.cc>
+
+	Add next page hint to show-prefix top
+
+	Also introduce which-key-note-face for notes and hints, and change 
+	format of next page hint slightly.
+
+2015-07-25  justbur  <justin@burkett.cc>
+
+	Add hint for next page key
+
+	Only shows when using echo for which-key-show-prefix
+
+	See #53
+
+2015-07-25  justbur  <justin@burkett.cc>
+
+	Fix show-next-page problem with mult events
+
+	Need to add (t . event) to unread-command-events to force emacs to add 
+	each event to the current command's sequence. See docs for 
+	unread-command-events.
+
+2015-07-24  justbur  <justin@burkett.cc>
+
+	Documentation is better now :-)
+
+2015-07-24  justbur  <justin@burkett.cc>
+
+	Add link to README about disabling special keys
+
+2015-07-24  justbur  <justin@burkett.cc>
+
+	Allow which-key-special-keys to be nil
+
+2015-07-23  justbur  <justin@burkett.cc>
+
+	Switch to lexical binding and fix warnings
+
+2015-07-23  justbur  <justin@burkett.cc>
+
+	Fix echo function
+
+2015-07-23  Justin Burkett  <justin@burkett.cc>
+
+	Add suggestion about tiling wm to readme
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Better strategy for dealing with minibuffer paging
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Hack to fix #48
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Allow side-window bottom to be shorter than 4
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Fix key/page count and bug in create-pages
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Simplify show page a little
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Bump version for new defaults
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Make side-window bottom the default
+
+	Also adds echo as the new default for the prefix key information (to use 
+	the echo area).
+
+	Making side-window bottom the default location, because it seems to have 
+	the best behavior overall after adding paging. Don't want to use the 
+	minibuffer because it's misbehaving right now.
+
+	Change echo-keystrokes if prefix is echo
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Add default replacement for next page
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Factor out paging timer and only start once
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Fix some hash quotes
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Protect 2-side-window function from too many args
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Remove show and hide functions for minibuffer
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Tweak next-page timer
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Fix for #49
+
+	Need to check if the prefix has changed when possibly restarting the 
+	timer after paging.
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Fix #50 - Don't show pages if only 1 page
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	No need to call show-popup for minibuffer
+
+2015-07-22  justbur  <justin@burkett.cc>
+
+	Use real-last-command instead of last-command
+
+	for which-key-show-next-page
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Fix a default regexp
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Fix sort order in readme again
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Fix latex in readme
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Move paging defcustoms
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Update readme with new features
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Much better paging implementation
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Don't prevent changing paging bindings
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Add options for paging (disabled by default)
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Fix readme
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Add check for no keys
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Add new setup function for right-bottom
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Turn off show remaining keys by default
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Merge branch 'develop'
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Basic paging works
+
+2015-07-21  justbur  <justin@burkett.cc>
+
+	Show page count with prefix
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Put spaces in separator so they can be changed
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Don't show page if first column doesn't fit
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Fix bug in page layout
+
+	Pages were getting dropped
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Ability to specify two locations for side-window
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	echo-keystrokes might be nil
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Start on right-bottom and bottom-right sw impl
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Add description sort and make key order default
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Typo in lighter-status function
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Fix mode line status
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Add status to mode line
+
+2015-07-20  justbur  <justin@burkett.cc>
+
+	Move all prefix adding code to one place
+
+2015-07-19  Justin Burkett  <justin@burkett.cc>
+
+	Update README.org
+
+2015-07-19  justbur  <justin@burkett.cc>
+
+	Add a couple of docstrings
+
+2015-07-19  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' into develop
+
+	Conflicts:
+	README.org
+	which-key.el
+
+2015-07-19  justbur  <justin@burkett.cc>
+
+	Fix prefix code
+
+	Also delete old code
+
+2015-07-19  justbur  <justin@burkett.cc>
+
+	Paging works barely
+
+2015-07-19  justbur  <justin@burkett.cc>
+
+	Rewrite of page creation alg
+
+2015-07-17  justbur  <justin@burkett.cc>
+
+	Typo in docstring
+
+2015-07-17  justbur  <justin@burkett.cc>
+
+	Add special key handling to key sort order
+
+2015-07-17  justbur  <justin@burkett.cc>
+
+	Add option to sort output by key (off by default)
+
+2015-07-17  justbur  <justin@burkett.cc>
+
+	Fix potential bug when no keys exist
+
+	Need to check for no keys before checking the number of keys on the 
+	first page in case the latter is nil
+
+2015-07-17  justbur  <justin@burkett.cc>
+
+	Start on new status key impl
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Use string-width instead of length for strings
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Reformat source
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Move badge below header
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Add MELPA badge and change README indentation
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Add MELPA badge and change README indentation
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Add MELPA to install insructions
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' of https://github.com/justbur/emacs-which-key
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Bump version
+
+2015-07-16  justbur  <justin@burkett.cc>
+
+	Change echo-keystrokes logic
+
+2015-07-16  Chunyang Xu	 <xuchunyang56@gmail.com>
+
+	Make which-key buffer uninteresting
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Erase truncate-lines message
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Tweak setup breaking out echo-keystrokes stuff
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Cleanup comments
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Add another key translation map to check
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Fix #39
+
+	`iso-transl-ctl-x-8-map' is not checked with `key-binding' because it's 
+	stored in the `key-translation-map', so this adds a test against this 
+	map.
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Better notes
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Don't show echo-keystroke note more than once
+
+	Fix #38
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Fix typos
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Add ability to temporarily prevent popups
+
+2015-07-15  justbur  <justin@burkett.cc>
+
+	Remove useless when
+
+2015-07-15  Justin Burkett  <justin@burkett.cc>
+
+	Merge pull request #36 from syohex/fix-funcall
+
+	Remove hash quotes
+
+2015-07-15  Steve Purcell  <steve@sanityinc.com>
+
+	Misc formatting fixes
+
+	- Inline standard license blurb
+	- Define parent of custom group
+	- Insert missing blank lines between top-level declarations
+
+2015-07-15  Syohei YOSHIDA  <syohex@gmail.com>
+
+	Remove hash quotes
+
+	They are variables, not functions, so hash quotes are not necessary.
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Switch to only using dashes for symbol names
+
+	Matches elisp conventions to the letter
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' of https://github.com/justbur/emacs-which-key
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Be consistent with use of double slash
+
+2015-07-14  Bar Magal  <barmagal@gmail.com>
+
+	Updated images for split frame
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Typo in readme
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Fix url in header
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	flycheck-package fixes
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Reorg the readme and add key features to intro
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Cleanup replacement functions again
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Fix add-replacement functions
+
+	Also cleanup use of push in code
+
+2015-07-14  justbur  <justin@burkett.cc>
+
+	Fix #33
+
+	Check for group before replacements occur
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	New default pictures
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Convert custom functions to defcustom
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Fix weird no room error
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Autoloads for helper functions
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Remove defaults related to outside packages
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Minor change to previous refactor
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Refactor column layout
+
+2015-07-13  justbur  <justin@burkett.cc>
+
+	Fix a message
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Remove some old code
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Add docstring for propertize-description
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Move unicode-correction and bump default to 3
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Fix #32
+
+	Main problem was a replacement regexp that looked for a forward slash in 
+	the description, which removed group:x/y
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Fix unicode-correction docstring
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Add support for custom display functions
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Change default unicode-correction
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Update commentary
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Fixes #24 (Update docstrings)
+
+2015-07-12  justbur  <justin@burkett.cc>
+
+	Cleanup replacement helper functions
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Add note to README about side-window defaults
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Add unicode correction for wide unicode chars
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Add default replacement for select-window-[N]
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Mention customize-group in README
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Readme typo
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Add replacement descriptions to readme.
+
+	Also move status list to end
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Merge branch 'readme' of https://github.com/bmag/emacs-which-key into
+	readme
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Show prefix in can't show messages
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Merge status-key
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Add status defcustom and clean-up layout funcs
+
+2015-07-11  Bar Magal  <barmagal@gmail.com>
+
+	readme: explain different popup types
+
+2015-07-11  Bar Magal  <barmagal@gmail.com>
+
+	Start special-features section in readme #29
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Add better check for no room in frame
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Protect against infinite loops
+
+2015-07-11  justbur  <justin@burkett.cc>
+
+	Protect against infinite loops
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Start to fix lock up on small vertical window
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Merge status-key and layout changes
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Fix bug when frame too small
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Remove message
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Merge branch 'fill-columns'
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Reorganize code and clean-up comments a little
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Re-enable the prefix option
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Require dash
+
+2015-07-10  Bar Magal  <barmagal@gmail.com>
+
+	Fix some defcustoms
+
+2015-07-10  Bar Magal  <barmagal@gmail.com>
+
+	Check frame width in a non-buggy way
+
+	`(window-width (frame-root-window))` throws an error when the frame is 
+	split (frame's root window is not live).
+
+2015-07-10  Bar Magal  <barmagal@gmail.com>
+
+	Use toggle-truncate-lines; reduce -> cl-reduce
+
+	Enabling toggle-truncate-lines in which-key--buffer, to avoid empty 
+	lines when the window is just a bit too narrow.
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Bring back error message for too small of a frame
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Fix bug (layout wasn't going to 1 line)
+
+2015-07-10  justbur  <justin@burkett.cc>
+
+	Fill columns first with variable column width
+
+	Allows for more compact layout
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Fix bug in populate buffer
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Try out status-key option
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Fix #6: TODO for defcustom
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Make variables stand-out in readme
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Fix add replacement functions
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Another typo
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Typo in add-major-mode-key-based-...
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Merge branch 'better-window-sizes'
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	remove mode-line
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Merge branch 'better-window-sizes' of
+	https://github.com/bmag/emacs-which-key into better-window-sizes
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Change side-window params to percentages
+
+2015-07-09  Bar Magal  <barmagal@gmail.com>
+
+	Use fit-window-to-buffer again
+
+2015-07-09  Bar Magal  <barmagal@gmail.com>
+
+	Allow percentages for side-window max sizes #19
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Add functions for adding to replacement alists
+
+2015-07-09  Bar Magal  <barmagal@gmail.com>
+
+	Fix text vs. total window width handling #22
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Remove mode-line and tweak max-height
+
+	max-height for side-window could still be more precise, but this seems 
+	to work
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Make user setup functions interactive and autoload
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Fix #22
+
+	Check for keymap instead of not a symbol.
+
+2015-07-09  justbur  <justin@burkett.cc>
+
+	Remove hidden-mode-line-mode
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Add minibuffer picture
+
+2015-07-08  Justin Burkett  <justin@burkett.cc>
+
+	Delete which-key-minibuffer.PNG
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Add bottom section and picture to readme
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Add minibuffer picture
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Add config setup functions and more
+
+	Fix a problem where the frame-height was not accouting for the 
+	minibuffer. Also, set the buffer to hidden-mode-line-mode to hide the 
+	mode-line for now (#16).
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Update readme
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Possible fix for #18
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Fix #21
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Fix act-width in populate-buffer
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Rework key-based replacement
+
+	Previous implementation didn't work for multiple major-mode bindings
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Fix replace-match and rewrite propertize-key
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Break out key-based replacement function.
+
+	Seems simpler to use `assoc-string` in this case.
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Fixes #19
+
+	Kind of a hack, but seems a lot easier than trying to get an exact 
+	calculation of the width
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Remove hide-popup call from update function
+
+	Doesn't seem to be needed anymore after adding hide-popup to the 
+	pre-command-hook.
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Fix bug in format-matches
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Add option to specify major-mode in replacements
+
+	Note all replacements need to be proper lists instead of cons cells now 
+	to add the option to check the third argument. If the third argument is 
+	missing it defaults to replacing in all major modes
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Revert unintended change to act-height calc
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Fix #17 errors when not enough room is available.
+
+	Also gives more control over whether and where to show prefix keys. When 
+	the buffer is vertical showing in first line seems to make more sense.
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Add :group to faces
+
+2015-07-08  justbur  <justin@burkett.cc>
+
+	Require cl-lib
+
+	Addresses #15
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Add key-based replacement list
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Add regexp to remove namespace (w minor cleanup)
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Remove column-width from max-dimensions
+
+	It's not needed
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Show prefix in popup
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Remove commented out close timer stuff
+
+	Closes #10
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Make echo-keystrokes a variable and speed it up.
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Be consistent in defining faces.
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Make default delay less aggressive.
+
+	Also avoids touching echo-keystrokes if it is already low.
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Maek special keys bold
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Add DEL to special keys
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Add small indication of more pages
+
+2015-07-07  justbur  <justin@burkett.cc>
+
+	Pull out faces and add special key face
+
+	Special keys (SPC, TAB, RET and ESC) are now truncated to one character 
+	and shown in inverse-video to distinguish them from S, T, R and E
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Need cl for emacs < 25
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Fix compiler warnings
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Change side-window default position to right
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Try without close timer
+
+2015-07-06  Justin Burkett  <justin@burkett.cc>
+
+	Merge pull request #13 from bmag/pre-command-hook
+
+	Hide buffer right before command execution
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Merge branch 'frame-popup' of https://github.com/bmag/emacs-which-key
+	into pr12
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Work on docstrings
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Redo replacement logic
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Make arrow separator into variable
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Refactor replacement alists
+
+2015-07-06  Bar Magal  <barmagal@gmail.com>
+
+	Hide buffer right before command execution
+
+	Fixes #9, this is also what guide-key uses.
+
+	When quoting functions, using "#'" tells the compiler that you're 
+	quoting a function, and allows it to catch void function errors.
+
+2015-07-06  Bar Magal  <barmagal@gmail.com>
+
+	Try to fix focus problems with popup frame #7
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Allow echo-keystrokes but make it quick
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Add .gitignore
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Fix problem with echo-keystrokes and minibuffer
+
+	If the echo-keystrokes delay is too long, it clobbers which-key in the 
+	minibuffer
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Remove popwin requirement; Add require cl
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Merge branch 'master' of https://github.com/bmag/emacs-which-key into
+	pr5
+
+2015-07-06  justbur  <justin@burkett.cc>
+
+	Delete old defvars and minor docstring cleanup
+
+2015-07-06  Bar Magal  <barmagal@gmail.com>
+
+	Fix doc, new frame parameters
+
+2015-07-06  Bar Magal  <barmagal@gmail.com>
+
+	Frame popup support and some small fixes
+
+	Summary of changes:
+	- add emacs 24.3 as a dependency, because
+	 `display-buffer-in-major-side-window` doesn't exist in older emacsen
+	- add option to show which-key buffer in a popup frame
+	 `(setq which-key-popup-type 'frame)`
+	- stop close timer when disabling which-key-mode
+	- don't hide which-key buffer before showing it. instead, show methods
+	 handle the case that the buffer is already shown
+	- `which-key/hide-popup` calls function depending on popup
+	 type (similar to `which-key/show-popup`)
+	- use `display-buffer-in-major-side-window` instead of
+	 `display-buffer-in-side-window`, for popup type side-window. ensures
+	 new side window is created properly even if other side windows already
+	 exist.
+	- erase previous contents of which-key buffer before inserting new
+	 contents, and adjust buffer display in window by moving point to
+	 the buffer's beginning
+
+2015-07-05  justbur  <justin@burkett.cc>
+
+	Rename config variables, simplifying interface
+
+	The primary config variable is now which-key-popup-type, which supports
+	'minibuffer and 'side-window. 'side-window has further associated
+	options, primarily which-key-side-window-location
+
+2015-07-05  justbur  <justin@burkett.cc>
+
+	Merge bmag changes
+
+	See PR #1
+
+2015-07-05  justbur  <justin@burkett.cc>
+
+	Organize keys by pages
+
+2015-07-05  Bar Magal  <barmagal@gmail.com>
+
+	Undo unintentional delete of end-of-file comment
+
+2015-07-05  Bar Magal  <barmagal@gmail.com>
+
+	Undo unintentional delete of provide line
+
+2015-07-05  Bar Magal  <barmagal@gmail.com>
+
+	Refactor before work on window display
+
+	Wanted to add support for using display-buffer or popwin, ran into some 
+	bugs, had to make changes to the code so future work will be easier. 
+	Details below:
+
+	- separate between code to display window and code to populate buffer
+	 contents
+	- add `which-key-horizontal-buffer-height` similar to
+	 `which-key-vertical-buffer-width`
+	- abstract handling of different display methods into
+	 `which-key/show-buffer` and `which-key/hide-buffer`, instead of mixed
+	 in other functions
+	- remove `which-key/make-display-method-aliases`
+	- support two display methods: `minibuffer` and `side-window`, will add
+	 popwin later
+	- create start/stop functions for which-key--close-timer
+	- a few other changes
+
+2015-07-04  justbur  <justin@burkett.cc>
+
+	Reorganize code a little
+
+2015-07-04  justbur  <justin@burkett.cc>
+
+	Factor out display functions
+
+	To add customization options later
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Change formatting of groups
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Toggle timer on frame focus
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Fix index error for subseq
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Switch default to minibuffer
+
+	There are a lot of changes here.
+	 1. Reorganized and factored a bunch of code.
+	 2. Rewrote the logic to calculate line breaks (much cleaner).
+	 3. Switched to using the minibuffer by default, which seems more
+	 foolproof and saves line space (I'm sure there's something wrong with
+	 this).
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Update docstrings and fix packaging
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Move cursor code to setup
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Try to hide cursor
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Better picture
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Get the cursor out of the way
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Add picture to readme
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Arrows are more fun
+
+	Also add padding between entries
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Switch readme to org-mode
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Switch back to popwin for now
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Remove unnecessary checks
+
+2015-07-03  justbur  <justin@burkett.cc>
+
+	Save popwin functions as comments
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Remove commented funcs and messages
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Add option to select display-buffer function.
+
+	Only 2 are implemented at the moment.
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Declare `which-key--close-timer'
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Fix close timer randomly kicking in
+
+	when you take too long to decide
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Fix text replacement alist
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Switch from popwin to display-buffer
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Start working on MELPA requirements
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Add provide line
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Fix variable names
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Make internal variables stand out
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Reorganize main update function
+
+2015-07-02  justbur  <justin@burkett.cc>
+
+	Cleanup
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Less rough now
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Add option to force buffer closed after certain amount of time
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Fix vertical buffer width
+
+	I think
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Improve choice of buffer width and height
+
+2015-07-01  Justin Burkett  <justin@burkett.cc>
+
+	Create README.md
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Add docstrings
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Remove hardcoded variables and switch popwin method
+
+	Use display-buffer with popwin:special-display-config
+
+2015-07-01  justbur  <justin@burkett.cc>
+
+	Initial Commit
+
+2015-07-01  Justin Burkett  <justin@burkett.cc>
+
+	Add license
+

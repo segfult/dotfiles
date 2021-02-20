@@ -1,0 +1,15 @@
+picom --config ~/.config/picom/picom.conf &
+
+sh ~/.screenlayout/default.sh
+sh ~/.screenlayout/dual.sh
+
+
+wal -R 
+
+nitrogen --restore --set-centered
+
+dunst &
+
+xinput set-prop "ETPS/2 Elantech Touchpad" 335 1
+xinput set-prop "ETPS/2 Elantech Touchpad" 315 1
+
