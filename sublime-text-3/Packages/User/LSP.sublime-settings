@@ -1,0 +1,21 @@
+{
+	"clients":
+	{
+		"clangd":
+		{
+			"enabled": true
+		},
+		"golsp":
+		{
+			"enabled": true
+		},
+		"gopls":
+		{
+			"enabled": true
+		},
+		"rust-analyzer":
+		{
+			"enabled": true
+		}
+	}
+}
