@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard) NDC.sublime-color-scheme",
+	"font_face": "Fira Code",
+	"font_size": 12,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+	],
+	"lsp_format_on_save": true,
+	"remember_open_files": false,
+	"tab_size": 4,
+	"theme": "gruvbox.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"vintage_start_in_command_mode": true
+}
